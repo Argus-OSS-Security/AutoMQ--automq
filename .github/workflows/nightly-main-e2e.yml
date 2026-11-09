@@ -1,9 +1,10 @@
 name: Nightly E2E tests
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 16 1,7,14,21,28 * *'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 16 1,7,14,21,28 * *'
+# 
 jobs:
   main_e2e_1:
     name: "Run Main E2E Tests 1"

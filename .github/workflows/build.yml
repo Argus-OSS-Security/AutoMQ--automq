@@ -14,12 +14,13 @@
 # limitations under the License.
 
 name: Build
-on:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-  push:
-    branches: [ "main" ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [ opened, reopened, synchronize, ready_for_review ]
+#   push:
+#     branches: [ "main" ]
+# 
 jobs:
   changes:
     runs-on: ubuntu-latest

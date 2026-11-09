@@ -15,13 +15,14 @@
 
 name: "Lint PR"
 
-on:
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - synchronize
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types:
+#       - opened
+#       - edited
+#       - synchronize
+# 
 jobs:
   main:
     name: Validate PR title

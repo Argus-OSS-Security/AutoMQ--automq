@@ -1,8 +1,9 @@
 name: Spark Iceberg image
 
-on:
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+# 
 jobs:
   docker:
     runs-on: ubuntu-latest

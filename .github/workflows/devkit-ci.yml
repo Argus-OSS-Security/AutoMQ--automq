@@ -1,17 +1,18 @@
 name: DevKit CI
 
-on:
-  pull_request:
-    paths:
-      - 'devkit/**'
-  workflow_dispatch:
-    inputs:
-      level:
-        description: 'Test level'
-        type: choice
-        options: [lint, smoke, full]
-        default: smoke
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - 'devkit/**'
+#   workflow_dispatch:
+#     inputs:
+#       level:
+#         description: 'Test level'
+#         type: choice
+#         options: [lint, smoke, full]
+#         default: smoke
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

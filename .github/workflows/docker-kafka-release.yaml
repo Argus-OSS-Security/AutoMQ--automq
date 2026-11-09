@@ -1,17 +1,18 @@
 name: AutoMQ Kafka Docker Release
 
-on:
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'AutoMQ Version Tag'
-        required: false
-        type: string
-  workflow_run:
-    workflows: ["GitHub Release"]
-    types:
-      - completed
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       tag:
+#         description: 'AutoMQ Version Tag'
+#         required: false
+#         type: string
+#   workflow_run:
+#     workflows: ["GitHub Release"]
+#     types:
+#       - completed
+# 
 jobs:
   automq-kafka-release:
     name: AutoMQ Kafka Docker Image Release

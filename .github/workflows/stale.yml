@@ -14,22 +14,23 @@
 # limitations under the License.
 
 name: 'Handle stale PRs'
-on:
-  schedule:
-    - cron: '30 3 * * *'    # Run at 3:30 UTC nightly
-  workflow_dispatch:
-    inputs:
-      dryRun:
-        description: 'Dry Run'
-        required: true
-        default: true
-        type: boolean
-      operationsPerRun:
-        description: 'Max GitHub API operations'
-        required: true
-        default: 30
-        type: number
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '30 3 * * *'    # Run at 3:30 UTC nightly
+#   workflow_dispatch:
+#     inputs:
+#       dryRun:
+#         description: 'Dry Run'
+#         required: true
+#         default: true
+#         type: boolean
+#       operationsPerRun:
+#         description: 'Max GitHub API operations'
+#         required: true
+#         default: 30
+#         type: number
+# 
 permissions:
   issues: write
   pull-requests: write

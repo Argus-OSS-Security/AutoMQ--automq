@@ -1,8 +1,9 @@
 name: E2E Docker Release
 
-on:
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+# 
 jobs:
   docker-release:
     name: Docker Image Release

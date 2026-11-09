@@ -15,13 +15,14 @@
 
 name: Publish Maven Snapshot Package
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Base version (e.g. 1.0.0)'
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: 'Base version (e.g. 1.0.0)'
+#         required: true
+# 
 jobs:
   publish:
     name: "Publish Snapshot to Github Packages"

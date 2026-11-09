@@ -14,11 +14,12 @@
 # limitations under the License.
 
 name: Docker Image CVE Scanner
-on:
-  schedule:
-    # This job will run at 3:30 UTC daily
-    - cron: '30 3 * * *'
-  workflow_dispatch:
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     # This job will run at 3:30 UTC daily
+#     - cron: '30 3 * * *'
+#   workflow_dispatch:
 jobs:
   scan_jvm:
     if: github.repository == 'apache/kafka'

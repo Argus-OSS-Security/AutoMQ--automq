@@ -1,11 +1,12 @@
 name: Nightly Release AutoMQ
 
-on:
-  workflow_dispatch:
-  schedule:
-    # Every day at 20:00 UTC, which is 04:00 in Beijing time
-    - cron: '0 20 * * *'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     # Every day at 20:00 UTC, which is 04:00 in Beijing time
+#     - cron: '0 20 * * *'
+# 
 jobs:
   github-release:
     name: GitHub Release with tgz

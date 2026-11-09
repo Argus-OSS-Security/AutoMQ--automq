@@ -15,17 +15,18 @@
 
 name: Publish Maven Package
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version to publish'
-        required: true
-  push:
-    tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
-      - '[0-9]+.[0-9]+.[0-9]+-rc[0-9]+'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: 'Version to publish'
+#         required: true
+#   push:
+#     tags:
+#       - '[0-9]+.[0-9]+.[0-9]+'
+#       - '[0-9]+.[0-9]+.[0-9]+-rc[0-9]+'
+# 
 env:
   VERSION: ${{ github.event.inputs.version || github.ref_name }}
 

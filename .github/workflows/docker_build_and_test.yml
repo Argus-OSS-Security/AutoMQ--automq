@@ -15,19 +15,20 @@
 
 name: Docker Build Test
 
-on:
-  workflow_dispatch:
-    inputs:
-      image_type:
-        type: choice
-        description: Docker image type to build and test
-        options: 
-          - "jvm"
-          - "native"
-      kafka_url:
-        description: Kafka url to be used to build the docker image
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       image_type:
+#         type: choice
+#         description: Docker image type to build and test
+#         options: 
+#           - "jvm"
+#           - "native"
+#       kafka_url:
+#         description: Kafka url to be used to build the docker image
+#         required: true
+# 
 jobs:
   build:
     runs-on: ubuntu-latest

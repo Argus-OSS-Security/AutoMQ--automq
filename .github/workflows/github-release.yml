@@ -1,13 +1,14 @@
 name: GitHub Release
 
-on:
-  push:
-    tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
-      - '[0-9]+.[0-9]+.[0-9]+-alpha[0-9]+'
-      - '[0-9]+.[0-9]+.[0-9]+-beta[0-9]+'
-      - '[0-9]+.[0-9]+.[0-9]+-rc[0-9]+'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags:
+#       - '[0-9]+.[0-9]+.[0-9]+'
+#       - '[0-9]+.[0-9]+.[0-9]+-alpha[0-9]+'
+#       - '[0-9]+.[0-9]+.[0-9]+-beta[0-9]+'
+#       - '[0-9]+.[0-9]+.[0-9]+-rc[0-9]+'
+# 
 jobs:
   github-release:
     name: GitHub Release with tgz
